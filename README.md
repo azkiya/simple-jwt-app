@@ -1,6 +1,7 @@
 
 # Simple JWT Auth App (Laravel)
 Mini project for crud package and implementation jwt
+[Article Medium](https://medium.com/@azkiya/implementasi-jwt-menggunakan-model-enkripsi-asimetris-di-laravel-83e61fb03644)
 ## Run Locally
 
 Clone the project
@@ -58,7 +59,6 @@ list of end point
 | ------ | ------ | ------ |
 | register  | GET | [localhost:8000/api/register] |
 | login | POST | [localhost:8000/api/login] |
-| logout | GET | [localhost:8000/api/logout] |
 | list packages | GET | [localhost:8000/api/packages] |
 | detail packages | GET | [localhost:8000/api/packages/{:id}] |
 | create packages | POST | [localhost:8000/api/packages] |
