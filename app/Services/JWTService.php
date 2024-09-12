@@ -17,8 +17,8 @@ class JWTService
         // Set up the JWT configuration
         $this->config = Configuration::forAsymmetricSigner(
             new Sha256(),
-            InMemory::file(storage_path('keys/private.key')),  // Private Key
-            InMemory::file(storage_path('keys/public.key'))    // Public Key
+            InMemory::file(storage_path('keys/private.key')),
+            InMemory::file(storage_path('keys/private.key'))
         );
     }
 
