@@ -18,7 +18,7 @@ class JWTService
         $this->config = Configuration::forAsymmetricSigner(
             new Sha256(),
             InMemory::file(storage_path('keys/private.key')),
-            InMemory::file(storage_path('keys/private.key'))
+            InMemory::file(storage_path('keys/public.key'))
         );
     }
 
@@ -53,7 +53,9 @@ class JWTService
 
             return $this->config->validator()->validate($token, ...$constraints);
         } catch (\Exception $e) {
-            return false;
+             // Log exception message
+             \Log::error('Token validation error: ' . $e->getMessage());
+        return false;
         }
     }
 
