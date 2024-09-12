@@ -59,6 +59,7 @@ class JWTService
 
     /**
      * Decode JWT token to get claims
+     * digunakan untuk mengekstrak data dari token jika diperlukan
      */
     public function decodeToken(string $token)
     {
